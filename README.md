@@ -1,0 +1,2 @@
+# ChipEightDocs
+A static website hosting documentation and blogs about the <a href = "https://github.com/JeremyS22/ChipEight" target = "_blank"> ChipEight emulator</a>.  Powered by Next.js and React.js 

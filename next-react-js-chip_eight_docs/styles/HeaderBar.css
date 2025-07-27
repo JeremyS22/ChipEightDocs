@@ -1,0 +1,10 @@
+.siteName {
+    color: #4e4e94ff; 
+    font-weight: 900; 
+    font-size: 35px;
+}
+
+.headerContainer {
+    border-bottom: solid #000058ff 3px;  
+} 
+

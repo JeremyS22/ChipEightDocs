@@ -1,0 +1,23 @@
+.footerContainer {
+    background-color: #e0dae9ff; 
+
+    padding-top: 10px; 
+    position: relative; 
+    bottom: 0;
+    left : 0; 
+    width: 100vw; 
+    height: 200px;
+    border-top: solid 10px #413e44ff; 
+} 
+
+.contentWrapperInFooter {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.siteNameInFooter {
+    color: #413e44ff; 
+    font-weight: 900; 
+    font-size: 30px; 
+}

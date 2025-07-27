@@ -1,0 +1,23 @@
+a {
+    text-decoration: none; 
+}
+
+* :not(a){
+    color: #4d4d4d; 
+}  
+
+.pageContainer {
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;  
+    margin-bottom: 40px;
+}
+
+.contentWrapperInHomePage {
+    flex: 1; 
+}
+
+::selection {
+    background-color: #757575ff; ; 
+    color: white; 
+}
