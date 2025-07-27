@@ -1,12 +1,7 @@
-import React from "react"
-import getDocMetadata from "../../../utils/getDocMetadata"; 
-import Link from "next/link"; 
+import React from "react"; 
+import Link from "next/link";
 
 function HomePage(){
-
-
-    const docMetadata = getDocMetadata('docPages'); 
-    console.log(docMetadata); 
 
     return (
         <main>

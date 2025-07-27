@@ -1,7 +1,7 @@
-import React from "react" 
-import LeftArrowAsset from "../../public/left-arrow.svg"
-import "../../styles/LeftArrow.css" 
-import Link  from "next/link"
+import React from "react"; 
+import LeftArrowAsset from "../../public/left-arrow.svg"; 
+import "../../styles/LeftArrow.css"; 
+import Link  from "next/link"; 
 
 type LeftArrowProps = {
     destination : string; 

@@ -1,6 +1,6 @@
-import React from 'react'
-import "../styles/HeaderBar.css" 
-import Link from 'next/link' 
+import React from 'react'; 
+import "../styles/HeaderBar.css"; 
+import Link from 'next/link'; 
 
 export default function HeaderBar() {
   return (

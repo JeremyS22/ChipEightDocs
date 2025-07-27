@@ -1,5 +1,5 @@
-import React from "react" 
-import "../styles/FooterBar.css" 
+import React from "react"; 
+import "../styles/FooterBar.css"; 
 
 export default function FooterBar() {
 

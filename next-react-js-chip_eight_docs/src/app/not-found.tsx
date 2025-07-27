@@ -1,6 +1,6 @@
-import Link from "next/link"
-import LeftArrow from "../../components/asset-components/LeftArrow" 
-import "../../styles/NotFound.css"
+import Link from "next/link"; 
+import LeftArrow from "../../components/asset-components/LeftArrow"; 
+import "../../styles/NotFound.css"; 
 
 export default function NotFound(){
 

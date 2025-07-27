@@ -1,12 +1,11 @@
-import React  from "react" 
-import fs from 'fs' 
-import Markdown from "markdown-to-jsx" 
-import matter from "gray-matter" 
-import getDocMetadata from "../../../../../utils/getDocMetadata" 
-import { redirect } from 'next/navigation' 
-import Link from "next/link"
-import "../../../../styles/slug.css"
-import LeftArrow from "../../../../components/asset-components/LeftArrow"
+import React  from "react"; 
+import fs from 'fs'; 
+import Markdown from "markdown-to-jsx"; 
+import matter from "gray-matter"; 
+import getDocMetadata from "../../../../../utils/getDocMetadata"; 
+import { redirect } from 'next/navigation'; 
+import "../../../../styles/slug.css"; 
+import LeftArrow from "../../../../components/asset-components/LeftArrow"; 
 
 
 function getDocContent(slug : string){
@@ -18,23 +17,23 @@ function getDocContent(slug : string){
     return matterResult; 
 }
 
-export const generateStaticMetadata = async () => {
+export const generateStaticParams = async () => {
     const posts = getDocMetadata('docPages'); 
 
     return posts.map((docs) => ({ slug: docs.slug})); 
 }
 
 export async function generateMetadata({ params } : { params : { slug: string } }){
-    const id = params?.slug ? params?.slug : ''
+    const id = params?.slug ? params?.slug : ''; 
 
     // regex, removes any underscores or dashes 
     return {
-        title: `ChipEight Docs ${id.replaceAll(/_|-/g, ' ')}`
+        title: `ChipEight Docs ${id.replaceAll(/_|-/g, ' ')}` 
     }
 }
 
 
-export default function DocPage({ params } : { params : { slug: string } }) {
+export default async function DocPage({ params } : { params : { slug: string } }) {
 
     const slug = params.slug; 
     const posts = getDocMetadata('docPages'); 

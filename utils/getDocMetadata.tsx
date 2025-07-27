@@ -1,5 +1,5 @@
-import fs from 'fs' 
-import matter from 'gray-matter' 
+import fs from 'fs'; 
+import matter from 'gray-matter'; 
 
 export default function getDocMetadata(basePath : string) {
     // get folder data 
