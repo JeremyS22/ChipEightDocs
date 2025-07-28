@@ -78,6 +78,7 @@ jobs:
           ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: |
+          mkdir out/
           cd next-react-js-chip_eight_docs/
           ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
