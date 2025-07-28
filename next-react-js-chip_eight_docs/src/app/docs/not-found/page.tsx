@@ -3,8 +3,11 @@ import Link from "next/link";
 import LeftArrow from "../../../../components/asset-components/LeftArrow"; 
 import "../../../../styles/DocNotFound.css"
 
-function NotFoundPage({ params } : { params : { slug: string } }){
+type Params = Promise<{ slug: string }> 
 
+async function NotFoundPage(props : { params: Promise<Params> }){
+
+        const params = await props.params; 
         const slug = params.slug; 
     
         

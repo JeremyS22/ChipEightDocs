@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
 import "../../../../styles/slug.css"; 
 import LeftArrow from "../../../../components/asset-components/LeftArrow"; 
 
+type Params = Promise<{ slug: string }> 
 
 function getDocContent(slug : string){
     const folder = 'docPages/'; 
@@ -23,18 +24,22 @@ export const generateStaticParams = async () => {
     return posts.map((docs) => ({ slug: docs.slug})); 
 }
 
-export async function generateMetadata({ params } : { params : { slug: string } }){
-    const id = params?.slug ? params?.slug : ''; 
+export async function generateMetadata(props : { params: Promise<Params> }){
+    const params = await props.params; 
+    const slug = params.slug; 
+
+    const id = slug ? slug : ''; 
 
     // regex, removes any underscores or dashes 
     return {
         title: `ChipEight Docs ${id.replaceAll(/_|-/g, ' ')}` 
-    }
+    };
 }
 
 
-export default async function DocPage({ params } : { params : { slug: string } }) {
+export default async function DocPage(props : { params: Promise<Params> }) {
 
+    const params = await props.params; 
     const slug = params.slug; 
     const posts = getDocMetadata('docPages'); 
 
