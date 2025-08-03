@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  output: "export",  
+  basePath: "/next-react-js-chip_eight_docs",
 };
 
 
