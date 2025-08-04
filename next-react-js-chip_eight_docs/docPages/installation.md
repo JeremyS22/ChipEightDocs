@@ -6,7 +6,7 @@ description: "How to install and run ChipEight on Windows 11 and Ubuntu Linux"
 <h1 id ="installation-id"> Installation </h1>
 
 
-This page will goes over the step to install ChipEight.  
+This page goes over the steps to install ChipEight.  
 > <div className = "blockquoteShading">Note that only debian linux, specifically Ubuntu, and Windows 11 have been tested.  Other operating systems will be added later.</div>  
 
 <h2 id ="linux-id"> Linux </h2>
@@ -32,7 +32,7 @@ This section will show you how to install these tools to get ChipEight built and
    - **lmingw32** 
 <p className = "codeBlock">sudo apt-get install gcc-mingw-w64 </p> 
 1. Build and compile the code by typing  
-<p className = "codeBlock">g++ -g -I src/include -L src/lib -o ChipEight main.cpp Cpu.cpp Screen.cpp Memory.cpp Keypad.cpp Debugger.cpp -lSDL2</p>
+<p className = "codeBlock">g++ -g -I src/include -I src/include/SDL2 -L src/lib -o ChipEight main.cpp Cpu.cpp Screen.cpp Memory.cpp Keypad.cpp Debugger.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf</p>
 1. Finally run the builded linux executable by typing 
 <p className = "codeBlock">./ChipEight</p> 
 

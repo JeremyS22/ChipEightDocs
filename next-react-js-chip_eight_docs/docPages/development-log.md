@@ -26,7 +26,7 @@ The VX and VY esepcially confused me until I realized what those where referring
 This is a strange one and can be a little confusing interpreting this instruction from documentation.  Basically you want to take the number in register VX and store each digit sequentially in memory.  The key here is that they need to be a decimal number (a normal base 10 number).  Not binary, not hexadecimal.  Initially this confused me, but basically after you understand BCD, how to access each digit and what I just mentioned, it's not confusing.    
 
 
-### Lesson's Learned 
+### Lessons Learned 
 
 #### Small Mistake in Cowgod's Documentation 
 
@@ -41,8 +41,22 @@ If you're completely new to emulation and don't know where to start, I have a re
 
 So the order I recommend is to start on the IBM logo boot ROM, it only includes 4 instructions and will get your emulator and it's instruction loop up and running.  Then move to Timendus' test suite and try to get those ROMs fully running and working.  While working through his <a href = "https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file#corax-opcode-test" target = "_blank">Corax+ opcode test ROM</a>, I recommending implementing the **2nnn** and **1nnn** (if not already implemented for the IBM logo ROM) opcodes first.  As these instructions can really break your emulator if the jump or pushing and popping off the stack mechanics aren't implemented correctly.  
 
-I learned this very quickly when I was first starting out.  After getting my first ROM to be fully implemented (IBM logo boot ROM) I was so excited and thought "let's try to tackle a full game like space invaders or tetris", but I quickly realized after running these games that my emulator lacked the instructions to properly run them.  So I was trying to figure out how to go about implementing these ROMs.  Eventually I found Timendus' test suite which helped iron out some of the opcodes needed to run these games.  He also includes a Screen test, flag test, keypad test and more which have been a huge help and <a href = "https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file" target = "_blank"> I recommend checking out</a>.   
+I learned this very quickly when I was first starting out.  After getting my first ROM to be fully implemented (IBM logo boot ROM) I was so excited and thought "let's try to tackle a full game like space invaders or tetris", but I quickly realized after running these games that my emulator lacked the instructions to properly run them.  So I was trying to figure out how to go about implementing these ROMs.  Eventually I found Timendus' test suite which helped iron out some of the opcodes needed to run these games.  He also includes a Screen test, flag test, keypad test and more which have been a huge help.   
 
+### Great Resources 
+
+Here are some resources I found that helped me and I recommend:  
+
+#### Timendus 
+As mentioned earlier and <a href = "https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file" target = "_blank"> Timendus' test suite </a>has been amazing and targets various areas of your emulator, which can be very helpful in ensuring you emulator functionality is correct.   
+
+#### Sravan1946
+
+There was a point where I notice my emulator was having trouble reading specific rom files.  One rom it seemed find, but switch to another and it would break!  Because of this, I had to find another resource that would help me compare and to pick out discrepancies in the opcodes I'm reading to another person's emulator.  So I found, 
+
+https://sravan1946.github.io/chip8/ 
+
+This emulator prints every instruction read from a rom and allowed me to compare opcodes, realize the bug and fix it.  Additionally, this emulator has a debugging feature, so you can set breakpoints and step through each instruction and view registers, stack, etc.  What a great resource, thanks Sravan! 
 
 
 
