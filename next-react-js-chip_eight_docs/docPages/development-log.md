@@ -48,7 +48,7 @@ I learned this very quickly when I was first starting out.  After getting my fir
 Here are some resources I found that helped me and I recommend:  
 
 #### Timendus 
-As mentioned earlier and <a href = "https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file" target = "_blank"> Timendus' test suite </a>has been amazing and targets various areas of your emulator, which can be very helpful in ensuring you emulator functionality is correct.   
+As mentioned earlier, <a href = "https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file" target = "_blank"> Timendus' test suite </a>has been amazing and targets various areas of your emulator, which can be very helpful in ensuring you emulator functionality is correct.   
 
 #### Sravan1946
 

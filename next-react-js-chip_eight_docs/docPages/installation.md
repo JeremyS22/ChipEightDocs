@@ -32,7 +32,7 @@ This section will show you how to install these tools to get ChipEight built and
    - **lmingw32** 
 <p className = "codeBlock">sudo apt-get install gcc-mingw-w64 </p> 
 1. Build and compile the code by typing  
-<p className = "codeBlock">g++ -g -I src/include -I src/include/SDL2 -L src/lib -o ChipEight main.cpp Cpu.cpp Screen.cpp Memory.cpp Keypad.cpp Debugger.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf</p>
+<p className = "codeBlock">g++ -g -I src/include -I src/include/SDL2 -L src/lib -o ChipEight main.cpp Cpu.cpp Screen.cpp Memory.cpp Keypad.cpp Debugger.cpp DebuggingTextbox.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf</p>
 1. Finally run the builded linux executable by typing 
 <p className = "codeBlock">./ChipEight</p> 
 
