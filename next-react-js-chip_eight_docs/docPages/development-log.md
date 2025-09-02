@@ -58,6 +58,3 @@ https://sravan1946.github.io/chip8/
 
 This emulator prints every instruction read from a rom and allowed me to compare opcodes, realize the bug and fix it.  Additionally, this emulator has a debugging feature, so you can set breakpoints and step through each instruction and view registers, stack, etc.  What a great resource, thanks Sravan! 
 
-
-
-
