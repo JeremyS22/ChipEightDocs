@@ -34,7 +34,7 @@ This section will show you how to install these tools to get ChipEight built and
 1. Build and compile the code by typing  
 <p className = "codeBlock">g++ -g -I src/include -I src/include/SDL2 -L src/lib -o src/bin/ChipEight main.cpp Cpu.cpp Screen.cpp Memory.cpp Keypad.cpp Debugger.cpp ChipEight.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf</p>
 1. Finally run the builded linux executable by typing 
-<p className = "codeBlock">make run</p> 
+<p className = "codeBlock">./src/bin/ChipEight</p> 
 
 <div className = "blockquoteShading">Note: The ChipEight emulator is still in early development, so it's very likely some roms won't be fully or playable at all. </div>  
 
